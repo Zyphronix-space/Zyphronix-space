@@ -4,10 +4,10 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/stephan-wasalathathrige)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:stephanwasalathanthrige@gmail.com)
-![Status](https://img.shields.io/badge/Open%20to-Internships-39d353?style=for-the-badge)
+![Open to internships](https://img.shields.io/badge/Open%20to%20Internships-39D353?style=for-the-badge)
 
-![Followers](https://img.shields.io/github/followers/Zyphronix-space?style=flat-square&color=58A6FF&labelColor=161B22&logoColor=white)
-![Profile views](https://komarev.com/ghpvc/?username=Zyphronix-space&style=flat-square&color=58A6FF&label=profile+views)
+![Followers](https://img.shields.io/github/followers/Zyphronix-space?style=for-the-badge&color=58A6FF&labelColor=161B22&logo=github&logoColor=white)
+![Profile views](https://komarev.com/ghpvc/?username=Zyphronix-space&style=for-the-badge&color=161B22&label=PROFILE+VIEWS)
 
 </div>
 
@@ -55,8 +55,10 @@
 ### GitHub activity
 
 <div align="center">
-<img src="https://streak-stats.demolab.com/?user=Zyphronix-space&theme=github-dark&hide_border=true&background=0D1117" alt="GitHub streak stats" />
+<img src="./metrics.svg" alt="GitHub metrics" width="100%" />
 </div>
+
+<sub>Generated daily by <a href="./.github/workflows/metrics.yml">a GitHub Action</a> committing straight to this repo — no third-party render-on-demand widget in the loop, so it can't go down.</sub>
 
 > One manual step left: on your profile page, click **Customize your pins** and pin VinuCare, house-price-predictor, resume-job-matcher, and furniture-management-system over `Assignment-3` / `DSA` — this README shows them either way, but pinned cards are what a visitor sees first.
 
