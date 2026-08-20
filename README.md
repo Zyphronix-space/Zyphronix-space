@@ -54,11 +54,7 @@
 
 ### GitHub activity
 
-<div align="center">
-<img src="./metrics.svg" alt="GitHub metrics" width="100%" />
-</div>
-
-<sub>Generated daily by <a href="./.github/workflows/metrics.yml">a GitHub Action</a> committing straight to this repo — no third-party render-on-demand widget in the loop, so it can't go down.</sub>
+<sub>A self-hosted stats graphic is queued for this section — one auth step is pending, see below.</sub>
 
 > One manual step left: on your profile page, click **Customize your pins** and pin VinuCare, house-price-predictor, resume-job-matcher, and furniture-management-system over `Assignment-3` / `DSA` — this README shows them either way, but pinned cards are what a visitor sees first.
 
