@@ -74,7 +74,7 @@ A Ballerina integration service: give it a city, it geocodes it, then fetches li
 - Weather and forex calls run concurrently via Ballerina's `start`/`wait`, not sequentially
 - Built specifically for WSO2's "real-world project implementation" contribution track
 
-[Repository](https://github.com/Zyphronix-space/city-snapshot-service)
+[Repository](https://github.com/Zyphronix-space/city-snapshot-service) &nbsp;·&nbsp; [Live Demo](https://delightful-mud-0758db600.7.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
 
 </td></tr>
 </table>
