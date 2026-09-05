@@ -83,7 +83,7 @@ A Ballerina integration service: give it a city, it geocodes it, then fetches li
 
 | Project | What it does | Stack |
 |---|---|---|
-| **[resume-job-matcher](https://github.com/Zyphronix-space/resume-job-matcher)** | Upload a CV + job description, get a semantic match score and a concrete skills gap, via sentence embeddings — not keyword matching | Python · sentence-transformers · FastAPI · React |
+| **[resume-job-matcher](https://github.com/Zyphronix-space/resume-job-matcher)** ([demo](https://salmon-ground-0609b6e00.7.azurestaticapps.net)) | Upload a CV + job description, get a semantic match score and a concrete skills gap, via sentence embeddings — not keyword matching | Python · sentence-transformers · FastAPI · React |
 | **[ai-research-agent](https://github.com/Zyphronix-space/ai-research-agent)** | An agent that decides on its own whether to search the web, run a calculation, or just answer, streaming each tool call live | Python · Gemini function calling · FastAPI · React |
 | **[doc-chat-rag](https://github.com/Zyphronix-space/doc-chat-rag)** | Upload a document, ask questions grounded only in retrieved chunks — a real RAG pipeline, not a plain LLM wrapper | Python · sentence-transformers · Chroma · Gemini · FastAPI · React |
 | **[sms-spam-classifier](https://github.com/Zyphronix-space/sms-spam-classifier)** | Classifies SMS text as spam/ham, comparing Naive Bayes against Logistic Regression on TF-IDF features | Python · scikit-learn · FastAPI · React |
