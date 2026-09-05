@@ -6,7 +6,7 @@
 
 ### Software / IT Developer — Full-Stack · AI &amp; Data · Systems Integration
 
-3rd-year BIT undergraduate who ships complete systems, not exercises — a React/Node/MySQL platform with real-time features, a run of FastAPI + scikit-learn/transformer ML services, and a Ballerina integration service for a WSO2 internship application.
+3rd-year BIT undergraduate who ships complete systems, not exercises — multi-agent and RAG platforms on FastAPI + Gemini, full-stack ML products with real auth and analytics, and a Ballerina integration service for a WSO2 internship application.
 
 [Portfolio](https://zyphronix-space.github.io/) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/stephan-wasalathathrige) &nbsp;·&nbsp; [Email](mailto:stephanwasalathanthrige@gmail.com) &nbsp;·&nbsp; [GitHub](https://github.com/Zyphronix-space)
 
@@ -14,11 +14,11 @@
 
 <br>
 
-> **Building** — FastAPI + React ML services (house-price regression, resume↔job semantic matching) and small agentic AI tools (RAG document chat, tool-calling research agent)
+> **Building** — Full-stack AI platforms (DocMind: multi-user RAG document intelligence; AI Research Crew: planner/worker/reviewer/synthesizer multi-agent pipelines) and end-to-end ML products (real-estate analytics, recruiter/candidate matching)
 >
 > **Learning** — Spring Boot &amp; J2EE, to round out the Java side
 >
-> **Interested in** — applying ML inside full-stack products, and service integration in the style Ballerina/WSO2 are built for
+> **Interested in** — applying ML and LLM agents inside full-stack products, and service integration in the style Ballerina/WSO2 are built for
 >
 > **Open to** — Software / IT internships
 
@@ -31,34 +31,50 @@
 <table>
 <tr><td width="100%">
 
-**VinuCare** — full-stack pet-care management platform
+**DocMind** — AI document intelligence platform
 
-Appointment booking, an online pet-product shop, and role-based dashboards for doctors, nurses, and admins, with live staff notifications over WebSockets.
+Upload documents and get answers grounded in real per-page citations — a full multi-user platform, not a single-shot RAG demo: JWT auth, per-user collections, persisted conversations, and an honest retrieval + faithfulness evaluation framework.
 
-**Stack:** React (Vite) · Node.js/Express · MySQL · Socket.io · Google OAuth
+**Stack:** Python · FastAPI · SQLAlchemy · Chroma · Gemini · React (Vite) · Tailwind CSS
 
 **Highlights**
-- Real-time staff messaging via Socket.io, not polling
-- Role-based dashboards (Doctor / Nurse / Admin) with live analytics
-- Email/password + Google auth, password-reset flow, transactional email via Resend
+- Per-page PDF chunking so every citation points at an exact page, not just "the document"
+- JWT auth, per-user collections, and conversations scoped to one document or a whole collection
+- Retrieval hit-rate + labeled Gemini-judge faithfulness scoring — disclosed as an approximation, not oversold as a rigorous eval
 
-[Repository](https://github.com/Zyphronix-space/VinuCare)
+[Repository](https://github.com/Zyphronix-space/doc-chat-rag) &nbsp;·&nbsp; [Live Demo](https://polite-coast-06d46f000.6.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
 
 </td></tr>
 <tr><td width="100%">
 
-**House Price Predictor** — end-to-end ML application
+**AI Research Crew** — multi-agent research pipeline
 
-Predicts California house prices from housing-block statistics, from model training through to a live prediction UI.
+Ask it a research question: a Planner breaks it into sub-questions, concurrent Worker agents research them with real web search, a Reviewer checks for gaps and can send workers back for another round, and a Synthesizer writes the final cited answer — every step streamed live.
 
-**Stack:** Python · scikit-learn · FastAPI · React (Vite)
+**Stack:** Python · FastAPI · Gemini structured output · React (Vite)
 
 **Highlights**
-- Benchmarks Linear Regression against Random Forest on MAE / R² before picking a model
-- Trained model serialized with `joblib` and served behind a `POST /predict` FastAPI endpoint
-- React frontend calls the live API — not a notebook demo
+- Real concurrent workers with real fan-in — live progress merged into one ordered event stream via an `asyncio.Queue`
+- Structured output at every stage (Pydantic `response_schema`), not regex-parsed free text
+- Bounded reflection loop — the Reviewer can send workers back for another round, capped so it can't loop forever
 
-[Repository](https://github.com/Zyphronix-space/house-price-predictor)
+[Repository](https://github.com/Zyphronix-space/ai-research-agent) &nbsp;·&nbsp; [Live Demo](https://delightful-desert-0af6ccc00.7.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
+
+</td></tr>
+<tr><td width="100%">
+
+**House Price Predictor** — AI real-estate analytics platform
+
+Predicts California housing prices and explains every prediction with a tree-path contribution breakdown, backed by comparable-property search, a what-if simulator, and an investment calculator — not just a form-and-answer demo.
+
+**Stack:** Python · scikit-learn · FastAPI · SQLAlchemy · React (Vite)
+
+**Highlights**
+- Hand-rolled Saabas-method tree-path explainability (mathematically exact) after `shap`'s heavy dependencies broke the Azure build
+- k-NN comparable-property search over the full 20,640-row reference dataset
+- JWT auth with per-user prediction history, not local-only demo state
+
+[Repository](https://github.com/Zyphronix-space/house-price-predictor) &nbsp;·&nbsp; [Live Demo](https://house-price-predictor-three-nu.vercel.app)
 
 </td></tr>
 <tr><td width="100%">
@@ -83,10 +99,9 @@ A Ballerina integration service: give it a city, it geocodes it, then fetches li
 
 | Project | What it does | Stack |
 |---|---|---|
-| **[resume-job-matcher](https://github.com/Zyphronix-space/resume-job-matcher)** ([demo](https://salmon-ground-0609b6e00.7.azurestaticapps.net)) | Upload a CV + job description, get a semantic match score and a concrete skills gap, via sentence embeddings — not keyword matching | Python · sentence-transformers · FastAPI · React |
-| **[ai-research-agent](https://github.com/Zyphronix-space/ai-research-agent)** | An agent that decides on its own whether to search the web, run a calculation, or just answer, streaming each tool call live | Python · Gemini function calling · FastAPI · React |
-| **[doc-chat-rag](https://github.com/Zyphronix-space/doc-chat-rag)** | Upload a document, ask questions grounded only in retrieved chunks — a real RAG pipeline, not a plain LLM wrapper | Python · sentence-transformers · Chroma · Gemini · FastAPI · React |
-| **[sms-spam-classifier](https://github.com/Zyphronix-space/sms-spam-classifier)** | Classifies SMS text as spam/ham, comparing Naive Bayes against Logistic Regression on TF-IDF features | Python · scikit-learn · FastAPI · React |
+| **[VinuCare](https://github.com/Zyphronix-space/VinuCare)** ([demo](https://witty-stone-0dc7a5c00.7.azurestaticapps.net/)) | Full-stack pet-care platform — appointment booking, an online pet-product shop, and role-based Doctor/Nurse/Admin dashboards with live staff notifications over WebSockets | React · Node.js/Express · MySQL · Socket.io · Google OAuth |
+| **[RecruitAI](https://github.com/Zyphronix-space/resume-job-matcher)** ([earlier demo](https://salmon-ground-0609b6e00.7.azurestaticapps.net)) | Recruiter/candidate workspace built around one explainable matching pipeline — job postings, applicant ranking, shortlisting, and live analytics, not just a single CV-vs-JD score. *(Demo still runs the project's earlier single-score version — the rebuild isn't deployed yet.)* | Python · sentence-transformers · FastAPI · React |
+| **[SpamShield](https://github.com/Zyphronix-space/sms-spam-classifier)** | Full-stack AI message-security platform — auth, persisted history, a feedback loop, CSV batch scanning, and model-performance analytics around a TF-IDF + Naive Bayes classifier, behind a Ballerina API gateway | Python · scikit-learn · Ballerina · FastAPI · React |
 
 ### Tier 3 — Foundations
 
@@ -114,7 +129,7 @@ A Ballerina integration service: give it a city, it geocodes it, then fetches li
 &nbsp;&nbsp;↓
 **Applied Systems** — role-based desktop management systems (Java Swing, Tkinter)
 &nbsp;&nbsp;↓
-**AI, Data &amp; Integration** — ML services, RAG and agentic tooling, Ballerina-based service integration
+**AI, Data &amp; Integration** — full-stack ML platforms, multi-agent and RAG systems, Ballerina-based service integration
 &nbsp;&nbsp;↓
 **Next** — Spring Boot / J2EE, deeper backend architecture
 
