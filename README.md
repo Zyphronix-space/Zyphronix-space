@@ -14,7 +14,7 @@
 
 <br>
 
-> **Building** — Full-stack AI platforms (DocMind: multi-user RAG document intelligence; AI Research Crew: planner/worker/reviewer/synthesizer multi-agent pipelines) and end-to-end ML products (real-estate analytics, recruiter/candidate matching)
+> **Building** — Full-stack AI platforms (ResearchOS: multi-agent research workspace with projects/sources/full auth; DocMind: multi-user RAG document intelligence) and end-to-end ML products (real-estate analytics, recruiter/candidate matching)
 >
 > **Learning** — Spring Boot &amp; J2EE, to round out the Java side
 >
@@ -31,6 +31,22 @@
 <table>
 <tr><td width="100%">
 
+**ResearchOS** — multi-agent AI research workspace
+
+Ask a research question and watch it turn into a cited report, live: a Planner breaks it into sub-questions, concurrent Researchers investigate them with real tools (web search, page fetch, calculator), a Reviewer checks the pooled findings for gaps and contradictions, and a Writer produces the final report — wrapped in a full workspace (projects, saved sources, research history, an agent-status page), not a single-shot Q&A demo.
+
+**Stack:** Python · FastAPI · Gemini structured output · SQLite · React (Vite) · React Router
+
+**Highlights**
+- Real concurrent researchers with real fan-in — live progress merged into one ordered event stream via an `asyncio.Queue`, plus a bounded Reviewer reflection loop
+- Structured sources (title + URL exactly as seen in a tool result, never a bare link) with relevance derived from the researcher's own confidence — no source metadata is ever invented
+- A real per-user data model (projects, sessions, sources) behind email/password + Google auth, with every lookup ownership-checked (cross-user access 404s, not 403s)
+
+[Repository](https://github.com/Zyphronix-space/ai-research-agent) &nbsp;·&nbsp; [Live Demo](https://delightful-desert-0af6ccc00.7.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
+
+</td></tr>
+<tr><td width="100%">
+
 **DocMind** — AI document intelligence platform
 
 Upload documents and get answers grounded in real per-page citations — a full multi-user platform, not a single-shot RAG demo: JWT auth, per-user collections, persisted conversations, and an honest retrieval + faithfulness evaluation framework.
@@ -43,22 +59,6 @@ Upload documents and get answers grounded in real per-page citations — a full 
 - Retrieval hit-rate + labeled Gemini-judge faithfulness scoring — disclosed as an approximation, not oversold as a rigorous eval
 
 [Repository](https://github.com/Zyphronix-space/doc-chat-rag) &nbsp;·&nbsp; [Live Demo](https://polite-coast-06d46f000.6.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
-
-</td></tr>
-<tr><td width="100%">
-
-**AI Research Crew** — multi-agent research pipeline
-
-Ask it a research question: a Planner breaks it into sub-questions, concurrent Worker agents research them with real web search, a Reviewer checks for gaps and can send workers back for another round, and a Synthesizer writes the final cited answer — every step streamed live.
-
-**Stack:** Python · FastAPI · Gemini structured output · React (Vite)
-
-**Highlights**
-- Real concurrent workers with real fan-in — live progress merged into one ordered event stream via an `asyncio.Queue`
-- Structured output at every stage (Pydantic `response_schema`), not regex-parsed free text
-- Bounded reflection loop — the Reviewer can send workers back for another round, capped so it can't loop forever
-
-[Repository](https://github.com/Zyphronix-space/ai-research-agent) &nbsp;·&nbsp; [Live Demo](https://delightful-desert-0af6ccc00.7.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
 
 </td></tr>
 <tr><td width="100%">
