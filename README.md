@@ -6,7 +6,7 @@
 
 ### Software / IT Developer — Full-Stack · AI &amp; Data · Systems Integration
 
-3rd-year BIT undergraduate who ships complete systems, not exercises — multi-agent and RAG platforms on FastAPI + Gemini, full-stack ML products with real auth and analytics, and a Ballerina integration service for a WSO2 internship application.
+3rd-year BIT undergraduate who ships complete systems, not exercises — multi-agent and RAG platforms on FastAPI + Gemini, a full-stack platform with real payments and an AI-assisted chatbot (VinuCare), full-stack ML products with real auth and analytics, and a Ballerina integration service for a WSO2 internship application.
 
 [Portfolio](https://zyphronix-space.github.io/) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/stephan-wasalathathrige) &nbsp;·&nbsp; [Email](mailto:stephanwasalathanthrige@gmail.com) &nbsp;·&nbsp; [GitHub](https://github.com/Zyphronix-space)
 
@@ -63,6 +63,22 @@ Upload documents and get answers grounded in real per-page citations — a full 
 </td></tr>
 <tr><td width="100%">
 
+**VinuCare** — full-stack pet-care platform
+
+A pet clinic and shop platform with the operational details a real business actually needs: appointment booking that can't double-book a slot, a real Sri Lankan payment gateway, and an AI assistant that can look up a signed-in customer's own appointments and orders instead of guessing.
+
+**Stack:** React (Vite) · Node.js/Express · MySQL · Socket.io · Claude API · PayHere
+
+**Highlights**
+- Real PayHere payment gateway — server-side hash generation, webhook signature verification, and an OAuth status-polling fallback for local development, not a mocked checkout
+- An AI assistant (Claude, with tool-calling) layered over a fast keyword FAQ matcher, grounded in a real knowledge base and able to pull a user's own live appointments/orders from the database on request
+- Concurrency-safe appointment booking — database-transaction slot locking plus Sri Lanka public-holiday awareness, so two customers can't book the same slot
+
+[Repository](https://github.com/Zyphronix-space/VinuCare) &nbsp;·&nbsp; [Live Demo](https://witty-stone-0dc7a5c00.7.azurestaticapps.net/)
+
+</td></tr>
+<tr><td width="100%">
+
 **House Price Predictor** — AI real-estate analytics platform
 
 Predicts California housing prices and explains every prediction with a tree-path contribution breakdown, backed by comparable-property search, a what-if simulator, and an investment calculator — not just a form-and-answer demo.
@@ -77,31 +93,15 @@ Predicts California housing prices and explains every prediction with a tree-pat
 [Repository](https://github.com/Zyphronix-space/house-price-predictor) &nbsp;·&nbsp; [Live Demo](https://house-price-predictor-three-nu.vercel.app)
 
 </td></tr>
-<tr><td width="100%">
-
-**City Snapshot Service** — WSO2 internship contribution project
-
-A Ballerina integration service: give it a city, it geocodes it, then fetches live weather and currency exchange rates concurrently and merges them into one response.
-
-**Stack:** Ballerina · Concurrent HTTP calls (`start`/`wait`) · HTML/CSS/JS frontend
-
-**Highlights**
-- Three public APIs (geocoding, weather, forex) orchestrated in one service
-- Weather and forex calls run concurrently via Ballerina's `start`/`wait`, not sequentially
-- Built specifically for WSO2's "real-world project implementation" contribution track
-
-[Repository](https://github.com/Zyphronix-space/city-snapshot-service) &nbsp;·&nbsp; [Live Demo](https://delightful-mud-0758db600.7.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
-
-</td></tr>
 </table>
 
 ### Tier 2 — Strong Projects
 
 | Project | What it does | Stack |
 |---|---|---|
-| **[VinuCare](https://github.com/Zyphronix-space/VinuCare)** ([demo](https://witty-stone-0dc7a5c00.7.azurestaticapps.net/)) | Full-stack pet-care platform — appointment booking, an online pet-product shop, and role-based Doctor/Nurse/Admin dashboards with live staff notifications over WebSockets | React · Node.js/Express · MySQL · Socket.io · Google OAuth |
 | **[RecruitAI](https://github.com/Zyphronix-space/resume-job-matcher)** ([earlier demo](https://salmon-ground-0609b6e00.7.azurestaticapps.net)) | Recruiter/candidate workspace built around one explainable matching pipeline — job postings, applicant ranking, shortlisting, and live analytics, not just a single CV-vs-JD score. *(Demo still runs the project's earlier single-score version — the rebuild isn't deployed yet.)* | Python · sentence-transformers · FastAPI · React |
 | **[SpamShield](https://github.com/Zyphronix-space/sms-spam-classifier)** | Full-stack AI message-security platform — auth, persisted history, a feedback loop, CSV batch scanning, and model-performance analytics around a TF-IDF + Naive Bayes classifier, behind a Ballerina API gateway | Python · scikit-learn · Ballerina · FastAPI · React |
+| **[CityScope](https://github.com/Zyphronix-space/city-snapshot-service)** ([demo](https://delightful-mud-0758db600.7.azurestaticapps.net)) | City weather & info app — live current/hourly/7-day forecast, air quality, an interactive map, city comparison, and currency conversion, all from one Ballerina API that fetches weather, air quality, and currency concurrently. Originally built as a WSO2 internship contribution project. | Ballerina · Leaflet · Vanilla JS |
 
 ### Tier 3 — Foundations
 
@@ -143,7 +143,7 @@ A Ballerina integration service: give it a city, it geocodes it, then fetches li
 
 **Backend** &nbsp; ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=nodedotjs&logoColor=white) ![FastAPI](https://img.shields.io/badge/-FastAPI-black?style=flat-square&logo=fastapi&logoColor=white) ![Laravel](https://img.shields.io/badge/-Laravel-black?style=flat-square&logo=laravel&logoColor=white)
 
-**AI / ML** &nbsp; ![scikit-learn](https://img.shields.io/badge/-scikit--learn-black?style=flat-square&logo=scikitlearn&logoColor=white) ![Gemini](https://img.shields.io/badge/-Gemini%20API-black?style=flat-square&logo=googlegemini&logoColor=white)
+**AI / ML** &nbsp; ![scikit-learn](https://img.shields.io/badge/-scikit--learn-black?style=flat-square&logo=scikitlearn&logoColor=white) ![Gemini](https://img.shields.io/badge/-Gemini%20API-black?style=flat-square&logo=googlegemini&logoColor=white) ![Claude](https://img.shields.io/badge/-Claude-black?style=flat-square&logo=anthropic&logoColor=white)
 
 **Data** &nbsp; ![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql&logoColor=white)
 
