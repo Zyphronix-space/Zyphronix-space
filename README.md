@@ -1,12 +1,14 @@
 <div align="center">
 
-![Status](https://img.shields.io/badge/Status-Open%20to%20Software%2FIT%20Internships-2E7D32?style=flat-square&labelColor=1a1a1a)
+<img src="banner.svg" alt="Stephan — Full-Stack Developer, AI/ML Enthusiast" width="100%" />
 
-# Stephan
+<br><br>
 
-### Software / IT Developer — Full-Stack · AI &amp; Data · Systems Integration
+![Status](https://img.shields.io/badge/Open%20to-Software%20%2F%20IT%20Internships-6C5CE7?style=flat-square&labelColor=0d0d16)
 
-3rd-year BIT undergraduate who ships complete systems, not exercises — multi-agent and RAG platforms on FastAPI + Gemini, a full-stack platform with real payments and an AI-assisted chatbot (VinuCare), full-stack ML products with real auth and analytics, and a Ballerina integration service for a WSO2 internship application.
+### Full-Stack Developer &nbsp;&#183;&nbsp; AI/ML Enthusiast
+
+3rd-year BIT undergraduate who ships complete systems, not exercises — multi-agent AI platforms on FastAPI + Gemini, a full-stack pet-care platform with real payments and an AI-assisted chatbot (VinuCare), full-stack ML products with real auth and analytics, and a Ballerina integration service built for a WSO2 internship application.
 
 [Portfolio](https://zyphronix-space.github.io/) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/stephan-wasalathathrige) &nbsp;·&nbsp; [Email](mailto:stephanwasalathanthrige@gmail.com) &nbsp;·&nbsp; [GitHub](https://github.com/Zyphronix-space)
 
@@ -14,7 +16,7 @@
 
 <br>
 
-> **Building** — Full-stack AI platforms (ResearchOS: multi-agent research workspace with projects/sources/full auth; DocMind: multi-user RAG document intelligence) and end-to-end ML products (real-estate analytics, recruiter/candidate matching)
+> **Building** — full-stack AI platforms (ResearchOS: multi-agent research workspace; DocMind: multi-user RAG document intelligence) and end-to-end ML products (real-estate analytics, recruiter/candidate matching)
 >
 > **Learning** — Spring Boot &amp; J2EE, to round out the Java side
 >
@@ -47,22 +49,6 @@ Ask a research question and watch it turn into a cited report, live: a Planner b
 </td></tr>
 <tr><td width="100%">
 
-**DocMind** — AI document intelligence platform
-
-Upload documents and get answers grounded in real per-page citations — a full multi-user platform, not a single-shot RAG demo: JWT auth, per-user collections, persisted conversations, and an honest retrieval + faithfulness evaluation framework.
-
-**Stack:** Python · FastAPI · SQLAlchemy · Chroma · Gemini · React (Vite) · Tailwind CSS
-
-**Highlights**
-- Per-page PDF chunking so every citation points at an exact page, not just "the document"
-- JWT auth, per-user collections, and conversations scoped to one document or a whole collection
-- Retrieval hit-rate + labeled Gemini-judge faithfulness scoring — disclosed as an approximation, not oversold as a rigorous eval
-
-[Repository](https://github.com/Zyphronix-space/doc-chat-rag) &nbsp;·&nbsp; [Live Demo](https://polite-coast-06d46f000.6.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
-
-</td></tr>
-<tr><td width="100%">
-
 **VinuCare** — full-stack pet-care platform
 
 A pet clinic and shop platform with the operational details a real business actually needs: appointment booking that can't double-book a slot, a real Sri Lankan payment gateway, and an AI assistant that can look up a signed-in customer's own appointments and orders instead of guessing.
@@ -79,7 +65,23 @@ A pet clinic and shop platform with the operational details a real business actu
 </td></tr>
 <tr><td width="100%">
 
-**House Price Predictor** — AI real-estate analytics platform
+**RecruitAI** — explainable AI recruiting platform
+
+A recruiter/candidate workspace built around one explainable NLP matching pipeline — sentence-embedding semantic similarity plus a curated skill taxonomy — instead of a keyword-count score. Job postings, applicant ranking, a shortlist pipeline, and analytics all trace back to that same pipeline.
+
+**Stack:** Python · sentence-transformers · FastAPI · React
+
+**Highlights**
+- Semantic matching (`all-MiniLM-L6-v2` embeddings) instead of keyword overlap — a resume that says "led a team migrating services to microservices" matches a job asking for "distributed systems experience" even without a shared keyword
+- Skill-gap breakdown with matched/missing skills, importance levels, and evidence snippets pulled from the actual resume text — every score is explainable, never a black box
+- A real two-sided product: recruiters and candidates get different data, navigation, and permissions, enforced server-side, not just hidden in the UI
+
+[Repository](https://github.com/Zyphronix-space/resume-job-matcher) &nbsp;·&nbsp; <sub>live demo runs the project's earlier single-score version — see the repo's README</sub>
+
+</td></tr>
+<tr><td width="100%">
+
+**HomeValue** — AI real-estate intelligence platform
 
 Predicts California housing prices and explains every prediction with a tree-path contribution breakdown, backed by comparable-property search, a what-if simulator, and an investment calculator — not just a form-and-answer demo.
 
@@ -99,9 +101,10 @@ Predicts California housing prices and explains every prediction with a tree-pat
 
 | Project | What it does | Stack |
 |---|---|---|
-| **[RecruitAI](https://github.com/Zyphronix-space/resume-job-matcher)** ([earlier demo](https://salmon-ground-0609b6e00.7.azurestaticapps.net)) | Recruiter/candidate workspace built around one explainable matching pipeline — job postings, applicant ranking, shortlisting, and live analytics, not just a single CV-vs-JD score. *(Demo still runs the project's earlier single-score version — the rebuild isn't deployed yet.)* | Python · sentence-transformers · FastAPI · React |
-| **[SpamShield](https://github.com/Zyphronix-space/sms-spam-classifier)** | Full-stack AI message-security platform — auth, persisted history, a feedback loop, CSV batch scanning, and model-performance analytics around a TF-IDF + Naive Bayes classifier, behind a Ballerina API gateway | Python · scikit-learn · Ballerina · FastAPI · React |
 | **[CityScope](https://github.com/Zyphronix-space/city-snapshot-service)** ([demo](https://delightful-mud-0758db600.7.azurestaticapps.net)) | City weather & info app — live current/hourly/7-day forecast, air quality, an interactive map, city comparison, and currency conversion, all from one Ballerina API that fetches weather, air quality, and currency concurrently. Originally built as a WSO2 internship contribution project. | Ballerina · Leaflet · Vanilla JS |
+| **[Furniture Management System](https://github.com/Zyphronix-space/furniture-management-system)** | Role-based desktop inventory & order system for a furniture business — five role dashboards, full CRUD, invoicing, MySQL-backed persistence via raw JDBC | Java · Swing · MySQL |
+| **[SpamShield](https://github.com/Zyphronix-space/sms-spam-classifier)** | Full-stack AI message-security platform — auth, persisted history, a feedback loop, CSV batch scanning, and model-performance analytics around a TF-IDF + Naive Bayes classifier, behind a Ballerina API gateway | Python · scikit-learn · Ballerina · FastAPI · React |
+| **[DocMind](https://github.com/Zyphronix-space/doc-chat-rag)** | Multi-user RAG document workspace — upload, organize into collections, and chat with page-accurate citations and an honest refusal when nothing supports the question | Python · FastAPI · Chroma · Gemini · React |
 
 ### Tier 3 — Foundations
 
@@ -111,7 +114,6 @@ Predicts California housing prices and explains every prediction with a tree-pat
 
 | Project | What it is |
 |---|---|
-| **[furniture-management-system](https://github.com/Zyphronix-space/furniture-management-system)** | Role-based desktop inventory/order system — Java, Swing, MySQL |
 | **[library-management-system](https://github.com/Zyphronix-space/library-management-system)** | Desktop library system with borrow/return tracking — Python, Tkinter, MySQL |
 | **[Film-vault-](https://github.com/Zyphronix-space/Film-vault-)** | Static movie/TV showcase site with genre browsing and a watchlist — HTML/CSS/JS |
 | **[DSA](https://github.com/Zyphronix-space/DSA)** | Data structures &amp; algorithms exercises — Java |
@@ -124,35 +126,74 @@ Predicts California housing prices and explains every prediction with a tree-pat
 ## Developer Journey
 
 **Foundation** — OOP, data structures, SQL fundamentals
-&nbsp;&nbsp;↓
+&nbsp;&nbsp;→&nbsp;&nbsp;
 **Full-Stack Development** — React/Node/MySQL apps with real auth and real-time features (VinuCare)
-&nbsp;&nbsp;↓
+&nbsp;&nbsp;→&nbsp;&nbsp;
 **Applied Systems** — role-based desktop management systems (Java Swing, Tkinter)
-&nbsp;&nbsp;↓
+&nbsp;&nbsp;→&nbsp;&nbsp;
 **AI, Data &amp; Integration** — full-stack ML platforms, multi-agent and RAG systems, Ballerina-based service integration
-&nbsp;&nbsp;↓
+&nbsp;&nbsp;→&nbsp;&nbsp;
 **Next** — Spring Boot / J2EE, deeper backend architecture
 
 <br>
 
 ## Tech Stack
 
-**Languages** &nbsp; ![Java](https://img.shields.io/badge/-Java-black?style=flat-square&logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript&logoColor=white) ![Ballerina](https://img.shields.io/badge/-Ballerina-black?style=flat-square&logo=ballerina&logoColor=white) ![PHP](https://img.shields.io/badge/-PHP-black?style=flat-square&logo=php&logoColor=white)
+<table>
+<tr>
+<td valign="top" width="50%">
 
-**Frontend** &nbsp; ![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=react&logoColor=white) ![HTML5](https://img.shields.io/badge/-HTML5-black?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/-CSS3-black?style=flat-square&logo=css3&logoColor=white)
+**Languages**
+![Java](https://img.shields.io/badge/-Java-0d0d16?style=flat-square&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-0d0d16?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-0d0d16?style=flat-square&logo=javascript&logoColor=white)
+![Ballerina](https://img.shields.io/badge/-Ballerina-0d0d16?style=flat-square&logo=ballerina&logoColor=white)
+![PHP](https://img.shields.io/badge/-PHP-0d0d16?style=flat-square&logo=php&logoColor=white)
 
-**Backend** &nbsp; ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=nodedotjs&logoColor=white) ![FastAPI](https://img.shields.io/badge/-FastAPI-black?style=flat-square&logo=fastapi&logoColor=white) ![Laravel](https://img.shields.io/badge/-Laravel-black?style=flat-square&logo=laravel&logoColor=white)
+**Frontend**
+![React](https://img.shields.io/badge/-React-0d0d16?style=flat-square&logo=react&logoColor=white)
+![HTML5](https://img.shields.io/badge/-HTML5-0d0d16?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-0d0d16?style=flat-square&logo=css3&logoColor=white)
 
-**AI / ML** &nbsp; ![scikit-learn](https://img.shields.io/badge/-scikit--learn-black?style=flat-square&logo=scikitlearn&logoColor=white) ![Gemini](https://img.shields.io/badge/-Gemini%20API-black?style=flat-square&logo=googlegemini&logoColor=white) ![Claude](https://img.shields.io/badge/-Claude-black?style=flat-square&logo=anthropic&logoColor=white)
+</td>
+<td valign="top" width="50%">
 
-**Data** &nbsp; ![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql&logoColor=white)
+**Backend**
+![Node.js](https://img.shields.io/badge/-Node.js-0d0d16?style=flat-square&logo=nodedotjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/-FastAPI-0d0d16?style=flat-square&logo=fastapi&logoColor=white)
+![Laravel](https://img.shields.io/badge/-Laravel-0d0d16?style=flat-square&logo=laravel&logoColor=white)
 
-**Tools** &nbsp; ![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git&logoColor=white) ![VS Code](https://img.shields.io/badge/-VS%20Code-black?style=flat-square&logo=visualstudiocode&logoColor=white) ![IntelliJ IDEA](https://img.shields.io/badge/-IntelliJ%20IDEA-black?style=flat-square&logo=intellijidea&logoColor=white) ![NetBeans](https://img.shields.io/badge/-NetBeans-black?style=flat-square&logo=apache-netbeans-ide&logoColor=white)
+**AI / ML**
+![scikit-learn](https://img.shields.io/badge/-scikit--learn-0d0d16?style=flat-square&logo=scikitlearn&logoColor=white)
+![Gemini](https://img.shields.io/badge/-Gemini%20API-0d0d16?style=flat-square&logo=googlegemini&logoColor=white)
+![Claude](https://img.shields.io/badge/-Claude-0d0d16?style=flat-square&logo=anthropic&logoColor=white)
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+
+**Data**
+![MySQL](https://img.shields.io/badge/-MySQL-0d0d16?style=flat-square&logo=mysql&logoColor=white)
+
+</td>
+<td valign="top" width="50%">
+
+**Tools**
+![Git](https://img.shields.io/badge/-Git-0d0d16?style=flat-square&logo=git&logoColor=white)
+![VS Code](https://img.shields.io/badge/-VS%20Code-0d0d16?style=flat-square&logo=visualstudiocode&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/-IntelliJ%20IDEA-0d0d16?style=flat-square&logo=intellijidea&logoColor=white)
+![NetBeans](https://img.shields.io/badge/-NetBeans-0d0d16?style=flat-square&logo=apache-netbeans-ide&logoColor=white)
+
+</td>
+</tr>
+</table>
 
 <br>
 
 <div align="center">
 
-![Profile views](https://komarev.com/ghpvc/?username=Zyphronix-space&style=flat-square&color=1a1a1a&label=Profile+views)
+![Profile views](https://komarev.com/ghpvc/?username=Zyphronix-space&style=flat-square&color=0d0d16&label=Profile+views)
 
 </div>
+</content>
