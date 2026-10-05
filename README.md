@@ -60,7 +60,7 @@ A pet clinic and shop platform with the operational details a real business actu
 - An AI assistant (Claude, with tool-calling) layered over a fast keyword FAQ matcher, grounded in a real knowledge base and able to pull a user's own live appointments/orders from the database on request
 - Concurrency-safe appointment booking — database-transaction slot locking plus Sri Lanka public-holiday awareness, so two customers can't book the same slot
 
-[Repository](https://github.com/Zyphronix-space/VinuCare) &nbsp;·&nbsp; [Live Demo](https://witty-stone-0dc7a5c00.7.azurestaticapps.net/)
+[Repository](https://github.com/Zyphronix-space/VinuCare) &nbsp;·&nbsp; [Live Demo](https://vinucare-complete.vercel.app)
 
 </td></tr>
 <tr><td width="100%">
@@ -101,7 +101,7 @@ Predicts California housing prices and explains every prediction with a tree-pat
 
 | Project | What it does | Stack |
 |---|---|---|
-| **[CityScope](https://github.com/Zyphronix-space/city-snapshot-service)** ([demo](https://delightful-mud-0758db600.7.azurestaticapps.net)) | City weather & info app — live current/hourly/7-day forecast, air quality, an interactive map, city comparison, and currency conversion, all from one Ballerina API that fetches weather, air quality, and currency concurrently. Originally built as a WSO2 internship contribution project. | Ballerina · Leaflet · Vanilla JS |
+| **[CityScope](https://github.com/Zyphronix-space/city-snapshot-service)** ([demo](https://cityscope-stephan.vercel.app)) | City weather & info app — live current/hourly/7-day forecast, air quality, an interactive map, city comparison, and currency conversion, all from one Ballerina API that fetches weather, air quality, and currency concurrently. Originally built as a WSO2 internship contribution project. | Ballerina · Leaflet · Vanilla JS |
 | **[Furniture Management System](https://github.com/Zyphronix-space/furniture-management-system)** | Role-based desktop inventory & order system for a furniture business — five role dashboards, full CRUD, invoicing, MySQL-backed persistence via raw JDBC | Java · Swing · MySQL |
 | **[SpamShield](https://github.com/Zyphronix-space/sms-spam-classifier)** | Full-stack AI message-security platform — auth, persisted history, a feedback loop, CSV batch scanning, and model-performance analytics around a TF-IDF + Naive Bayes classifier, behind a Ballerina API gateway | Python · scikit-learn · Ballerina · FastAPI · React |
 | **[DocMind](https://github.com/Zyphronix-space/doc-chat-rag)** | Multi-user RAG document workspace — upload, organize into collections, and chat with page-accurate citations and an honest refusal when nothing supports the question | Python · FastAPI · Chroma · Gemini · React |
