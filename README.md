@@ -76,7 +76,7 @@ A recruiter/candidate workspace built around one explainable NLP matching pipeli
 - Skill-gap breakdown with matched/missing skills, importance levels, and evidence snippets pulled from the actual resume text — every score is explainable, never a black box
 - A real two-sided product: recruiters and candidates get different data, navigation, and permissions, enforced server-side, not just hidden in the UI
 
-[Repository](https://github.com/Zyphronix-space/resume-job-matcher) &nbsp;·&nbsp; <sub>live demo runs the project's earlier single-score version — see the repo's README</sub>
+[Repository](https://github.com/Zyphronix-space/resume-job-matcher) &nbsp;·&nbsp; [Live Demo](https://resume-match-stephan.vercel.app)
 
 </td></tr>
 <tr><td width="100%">
@@ -103,8 +103,8 @@ Predicts California housing prices and explains every prediction with a tree-pat
 |---|---|---|
 | **[CityScope](https://github.com/Zyphronix-space/city-snapshot-service)** ([demo](https://cityscope-stephan.vercel.app)) | City weather & info app — live current/hourly/7-day forecast, air quality, an interactive map, city comparison, and currency conversion, all from one Ballerina API that fetches weather, air quality, and currency concurrently. Originally built as a WSO2 internship contribution project. | Ballerina · Leaflet · Vanilla JS |
 | **[Furniture Management System](https://github.com/Zyphronix-space/furniture-management-system)** | Role-based desktop inventory & order system for a furniture business — five role dashboards, full CRUD, invoicing, MySQL-backed persistence via raw JDBC | Java · Swing · MySQL |
-| **[SpamShield](https://github.com/Zyphronix-space/sms-spam-classifier)** | Full-stack AI message-security platform — auth, persisted history, a feedback loop, CSV batch scanning, and model-performance analytics around a TF-IDF + Naive Bayes classifier, behind a Ballerina API gateway | Python · scikit-learn · Ballerina · FastAPI · React |
-| **[DocMind](https://github.com/Zyphronix-space/doc-chat-rag)** | Multi-user RAG document workspace — upload, organize into collections, and chat with page-accurate citations and an honest refusal when nothing supports the question | Python · FastAPI · Chroma · Gemini · React |
+| **[SpamShield](https://github.com/Zyphronix-space/sms-spam-classifier)** ([demo](https://spamshield-green.vercel.app)) | Full-stack AI message-security platform — auth, persisted history, a feedback loop, CSV batch scanning, and model-performance analytics around a TF-IDF + Naive Bayes classifier, behind a Ballerina API gateway | Python · scikit-learn · Ballerina · FastAPI · React |
+| **[DocMind](https://github.com/Zyphronix-space/doc-chat-rag)** ([demo](https://docmind-kohl-pi.vercel.app)) | Multi-user RAG document workspace — upload, organize into collections, and chat with page-accurate citations and an honest refusal when nothing supports the question | Python · FastAPI · Chroma · Gemini · React |
 
 ### Tier 3 — Foundations
 
