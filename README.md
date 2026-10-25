@@ -44,7 +44,7 @@ Ask a research question and watch it turn into a cited report, live: a Planner b
 - Structured sources (title + URL exactly as seen in a tool result, never a bare link) with relevance derived from the researcher's own confidence — no source metadata is ever invented
 - A real per-user data model (projects, sessions, sources) behind email/password + Google auth, with every lookup ownership-checked (cross-user access 404s, not 403s)
 
-[Repository](https://github.com/Zyphronix-space/ai-research-agent) &nbsp;·&nbsp; [Live Demo](https://delightful-desert-0af6ccc00.7.azurestaticapps.net) <sub>(hosted on Azure — may take ~10s to wake up)</sub>
+[Repository](https://github.com/Zyphronix-space/ai-research-agent) &nbsp;·&nbsp; [Live Demo](https://researchos-stephan.vercel.app)
 
 </td></tr>
 <tr><td width="100%">
